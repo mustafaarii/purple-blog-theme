@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color:rgb(206, 206, 206);
+}
+
+/* HEADER */
+
+.header{
+    background-color: rgb(241, 243, 245);
+    border-top: 4px solid rgb(86, 17, 98);
+    position: relative;
+    z-index: 1000;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.assets {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+.assets > div {
+    width: 50%;
+}
+.assets > .logo > img {
+    width: 200px;
+    height: 85px;
+    margin-left: 10%;
+}
+
+/* MENUS */
+
+.menus {
+    
+    width: 100%;
+    color: rgb(86, 17, 98);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid rgb(86, 17, 98);
+    padding: 0;
+    background-color: rgb(226, 226, 226);
+    font-size: 0.8em;
+    font-weight: 540;
+}
+
+.header > .menus > a, .dropdown > a{
+    display: inline-block;
+    padding: 20px;
+    border-right: 1px solid rgb(185, 184, 186);
+    transition: background-color 300ms, color 300ms;
+}
+
+.header > .menus > a:hover,.header > .menus > .active, .dropdown > a:hover{
+    background-color: rgb(86, 17, 98);
+    color: white;
+    cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown > .dropdown-content {
+    width: 20%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgb(86, 17, 98);
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 600ms;
+}
+
+.dropdown > .dropdown-content > a {
+    padding: 20px;
+    border-bottom: 1px solid rgb(115, 32, 130);
+}
+
+.dropdown > .dropdown-content > a:hover{
+    cursor: pointer;
+    background-color: rgb(115, 32, 130)
+}
+
+.dropdown:hover .dropdown-content{
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-link{
+    background-color: rgb(86, 17, 98);
+    color: white;
+}
+
+/* NEWS */
+.news{
+    border-bottom: 1px solid rgb(185, 184, 186);
+    background-color: rgb(226, 226, 226);
+    margin: 10px;
+    padding: 10px;
+}
+
+.news >p:first-child:before {
+    font-family: FontAwesome;
+    content: "News \f1ea";
+    display: inline-block;
+    background-color: rgb(86, 17, 98);
+    border-radius: 20px;
+    color: white;
+    padding: 8px;
+    line-height: normal;
+    margin-right: 2%;
+}
+
+.news > p {
+    color: rgb(86, 17, 98);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* CONTENT */
+.content-wrapper{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-left: 10px;
+    height: 100%;
+}
+
+/* SIDEBAR */
+
+.sidebar > *{
+    padding: 5%;
+}
+
+.sidebar > * > *:first-child {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(86, 17, 98);
+    color: rgb(86, 17, 98);
+}
+
+/* SEARCH */
+
+.search-container > .search > input {
+    padding : 7px;
+    width: 60%;
+    border-bottom: 2px solid rgb(185, 184, 186);;
+    background-color: rgb(226, 226, 226);
+    transition: border-color 500ms;
+}
+
+.search-container > .search > input:focus{
+    outline: none;
+    border-color: rgb(86, 17, 98);
+
+}
+
+/* CATEGORİES */
+
+.categories > ul {
+    list-style-type: none;
+}
+
+.categories > ul > li{
+    padding : 10px;
+    transition: transform 500ms;
+    color: rgb(86, 17, 98);
+    
+}
+
+.categories > ul > li > a{
+    text-decoration: none;
+    color: rgb(86, 17, 98);
+}
+
+.categories > ul > li > span {
+    border-radius: 10px;
+    background-color: rgb(86, 17, 98);
+    color: whitesmoke;
+    padding : 3px 7px 3px 7px;
+    font-size: 12px;
+    float: right;
+}
+
+.categories > ul > li:hover{
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+
+/*  SOCİAL İCONS  */
+
+.social{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.social > a{
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    color: rgb(86, 17, 98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 70%;
+    transition: background 500ms;
+}
+
+.social > a:hover{
+    background-color: rgb(86, 17, 98);
+    color: white;
+}
+
+.social > a:last-child{
+    margin-right: 5px;
+}
+
+/* POSTS */
+
+.post-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.post{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin-top: 3%;
+    box-shadow: 0px 0px 3px grey;
+}
+
+.post > .post-image img{
+    width: 300px;
+    height: 100%;
+}
+
+.post-content > *{
+    padding: 15px;
+}
+
+.post > .post-content > .content-head > a {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.post-content > .content-head > .post-infos{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.post-content > .content-head > .post-infos > * {
+    color: white;
+    background: rgb(121, 167, 211);
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.post-content > .read-more {
+    float: right;
+    transition: transform 500ms;
+}
+
+.post-content > .read-more button::after{
+    content: "\f061";
+    font-family: "FontAwesome";
+    font-size: 12px;
+}
+
+.post-content > .read-more:hover{
+    transform: translateX(4px);
+}

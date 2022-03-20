@@ -1,0 +1,126 @@
+/* BUTTON */
+
+.button{
+    width: auto;
+    height: auto;
+    background-color: rgb(86, 17, 98);
+    border-radius: 5px;
+    padding:17px;
+    color: white;
+    line-height: 0;
+    cursor: pointer;
+    transition: background 500ms;
+}
+
+.button:hover{
+    background-color: rgb(115, 32, 130);
+    box-shadow: 0px 0px 5px rgb(86, 17, 98);;
+}
+
+/* CARD */
+
+.card{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template: auto / 1fr 3fr;
+    grid-gap: 10px;
+    margin: 0px 0px 10px 0px;
+}
+
+.card > .card-img > img{
+    width: 100%;
+}
+
+.card > .card-head{
+    grid-column: 1/-1;
+}
+
+.card > .card-head > a {
+    font-size: 14px;
+    font-weight: 550;
+    text-decoration: none;
+    color: rgb(86, 17, 98);
+}
+
+.card > .card-content{
+    font-style: italic;
+}
+
+.card .date{
+    font-size: 10px;
+    float: right;
+    margin-top: 5%;
+}
+
+
+/* CAROUSEL */
+
+.carousel{
+    width: 100%;
+    height: 350px;
+    display: grid;
+    grid-template: 1fr 1fr/2fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.carousel > .box{
+    position: relative;
+    border-radius: 10px;
+    transition: transform 500ms;
+    z-index: 10;
+}
+
+.carousel > .box:first-child{
+    grid-row: 1/-1;
+}
+
+.carousel > .box > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.carousel > .box > .label{
+    position: absolute;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(86, 17, 98,0.7);
+    border-radius: 10px;
+    font-weight: 550;
+    font-size: 10px;
+    color: rgb(241, 243, 245);
+    vertical-align: center;
+    text-transform: uppercase;
+}
+
+.carousel > .box > .description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    background-color: rgb(86, 17, 98,0.7);
+    transition: background 500ms;
+}
+
+.carousel > .box:hover{
+    transform: scale(1.1,1.1);
+    z-index: 11;
+}
+
+.carousel > .box:hover .description, .carousel > .box:hover .label{
+    background-color: rgb(86, 17, 98,0.9);
+}
+
+.carousel > .box > .description > a {
+    position: relative;
+    color: white;
+    font-style: italic;
+}
